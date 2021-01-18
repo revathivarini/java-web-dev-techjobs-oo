@@ -103,11 +103,11 @@ public class Job {
 //     return "\n"+"\n";
         return  "\n"+"ID: " + (this.id == 0 ? "Data is not Available.": this.id)+ "\n"+
                 "Name: " + (this.name == "" ? "Data is not Available." : this.name) +"\n"+
-                "Employer: " + (this.employer == null ? "Data is not Available." : this.employer) +"\n"+
+                "Employer: " + (this.employer == null || this.employer.getValue() == null ? "Data is not Available." : this.employer) +"\n"+
 
-                "Location: " + (this.location == null ? "Data is not Available." : this.location)+"\n"+
-                "PositionType: " + (this.positionType == null ? "Data is not Available." : this.positionType) +"\n"+
-                "CoreCompetency: " + (this.coreCompetency == null ? "Data is not Available." : this.coreCompetency)+"\n"
+                "Location: " + (this.location == null || this.location.getValue() == null ? "Data is not Available." : this.location)+"\n"+
+                "PositionType: " + (this.positionType == null  || this.positionType.getValue() == null? "Data is not Available." : this.positionType) +"\n"+
+                "CoreCompetency: " + (this.coreCompetency == null || this.coreCompetency.getValue() == null ? "Data is not Available." : this.coreCompetency)+"\n"
                 ;
     }
 }

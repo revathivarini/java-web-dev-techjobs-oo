@@ -8,8 +8,8 @@ import static org.junit.Assert.*;
 
 public class JobTest {
 
-     Job test_job;
-      Job newJob;
+     private Job test_job;
+      private Job newJob;
 
 
     @Test
@@ -25,7 +25,9 @@ public class JobTest {
     public void testJobConstructorSetsAllFields(){
         test_job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality Control"), new CoreCompetency("Persistence"));
         //assertTrue(test_job.getName() == "Product tester");
+        //System.out.println(test_job.getEmployer());
         assertTrue(test_job.getEmployer() instanceof Employer);
+        assertEquals(true, test_job.getEmployer() instanceof Employer);
     }
 
     @Test
